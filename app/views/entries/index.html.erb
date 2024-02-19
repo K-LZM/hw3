@@ -1,0 +1,8 @@
+<h1><%= @entry["last_name"] %>, <%= @entry["first_name"] %></h1>
+
+<ul>
+  <li><%= @entry["email"] %></li>
+  <li><%= @entry["phone_number"] %></li>
+</ul>
+
+<p><a href="/companies/<%= @company["id"] %>">Back to <%= @company["name"] %></a></p>
