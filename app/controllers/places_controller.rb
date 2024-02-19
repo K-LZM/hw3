@@ -9,7 +9,7 @@ class PlacesController < ApplicationController
   def show
     # find a Place
     @place = Place.find_by({"id" => params["id"]})
-    @entry = Entry.find_by({"id" => @entry["place_id"]})
+    # @entry = Entry.find_by({"id" => @entry["place_id"]})
     # render place/show view with details about Place
   end
 
@@ -27,4 +27,9 @@ class PlacesController < ApplicationController
     # redirect user
     redirect_to "/places"
   end
+
+  def error
+    render 'not_found', status: :not_found
+  end
+
 end

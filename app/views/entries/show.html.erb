@@ -1,8 +1,8 @@
-<h1><%= @place["name"] %></h1>
+<h1><%= @entry["title"] %></h1>
 
 <ul>
-  <li><%= @contact["email"] %></li>
-  <li><%= @contact["phone_number"] %></li>
+  <li><%= @entry["description"] %></li>
+  <li><%= @entry["posted_on"] %></li>
 </ul>
 
-<p><a href="/companies/<%= @company["id"] %>">Back to <%= @company["name"] %></a></p>
+<p><a href="/companies/<%= @place["id"] %>">Back to <%= @place["name"] %></a></p>
