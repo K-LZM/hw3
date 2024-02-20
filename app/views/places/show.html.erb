@@ -1,20 +1,21 @@
-<h1> <%= @place["name"] %>
-
-<h3>Entries coming soon...</h3>
+<h1> <%= @place["name"] %></h1>
 
 <%  %>
 <ul>
   <% for entry in @entries %>
     <li>
-      <%= entry["title"] %>
-      <%= entry["discription"] %>
+      <b><font size="5"><%= entry["title"] %></font></b>
+      <br/>
       <%= entry["posted_on"] %>
+      <br/>
+      <%= entry["description"] %> 
     </li>
+    <br/>
   <% end %>
 </ul>
 
 <p>
-  <a href="/entries/new?places_id=<%= @place["id"] %>">Add New Entries</a>
+  <a href="/entries/new?place_id=<%= @place["id"] %>">Add New Entries</a>
 </p>
 
 <p>

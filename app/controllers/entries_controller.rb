@@ -1,4 +1,5 @@
 class EntriesController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def show
     @entry = Entry.find_by({"id" => params["id"]})
     @place = Place.find_by({"id" => @entry["place_id"]})
@@ -17,7 +18,7 @@ class EntriesController < ApplicationController
 
     # assign user-entered form data to entry's columns
     @entry["title"] = params["title"]
-    @entry["desciption"] = params["desciption"]
+    @entry["description"] = params["description"]
     @entry["posted_on"] = params["posted_on"]
    
     # assign relationship between entry and Place
