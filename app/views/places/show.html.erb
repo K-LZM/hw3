@@ -2,8 +2,19 @@
 
 <h3>Entries coming soon...</h3>
 
+<%  %>
+<ul>
+  <% for entry in @entries %>
+    <li>
+      <%= entry["title"] %>
+      <%= entry["discription"] %>
+      <%= entry["posted_on"] %>
+    </li>
+  <% end %>
+</ul>
+
 <p>
-  <a href="/places/new">Add New Place</a>
+  <a href="/entires/new?places_id=<%= @place["id"] %>">Add New Entries</a>
 </p>
 
 <p>
