@@ -28,8 +28,5 @@ class PlacesController < ApplicationController
     redirect_to "/places"
   end
 
-  def error
-    render 'not_found', status: :not_found
-  end
 
 end
